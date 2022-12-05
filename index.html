@@ -31,6 +31,60 @@
                     <p>Paragraphe introduction voitures autonomes</p><a class="btn btn-outline-primary" role="button" href="#">Bouton test</a>
                 </div>
             </div>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+            <script>
+                const ctx = document.getElementById('myChart');
+                new Chart(ctx, {
+                  type: 'doughnut',
+                  data: {
+                    labels: ['état', 'ingénieurs', 'March', 'April', 'May'],
+                    datasets: [
+                      {
+                        data: [50, 60, 70, 180, 190],
+                        backgroundColor: [
+                          '#EA526F',
+                          '#23B5D3',
+                          '#279AF1',
+                          '#935FA7',
+                          '#DAFEB7',
+                        ],
+                        datalabels: {
+                          labels: {
+                            index: {
+                              color: '#404040',
+                              font: {
+                                size: 18,
+                              },
+                              // See https://chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context
+                              formatter: (val, ctx) => ctx.chart.data.labels[ctx.dataIndex],
+                              align: 'end',
+                              anchor: 'end',
+                            },
+                          },
+                        },
+                      },
+                    ],
+                  },
+                  options: {
+                    legend: {
+                      display: false,
+                    },
+                    layout: {
+                      padding: {
+                        top: 30,
+                        bottom: 30,
+                      },
+                    },
+                    plugins: {
+                      datalabels: {
+                        display: true,
+                      },
+                    },
+                  },
+                });
+            </script>
             <div class="text-center pulse animated"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;état&quot;,&quot;Constructeurs&quot;,&quot;Assurances&quot;,&quot;Associations&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Poids&quot;,&quot;backgroundColor&quot;:[&quot;#e8112d&quot;,&quot;rgb(252,163,17)&quot;,&quot;rgb(80,187,30)&quot;,&quot;rgb(58,117,196)&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;position&quot;:&quot;top&quot;},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;,&quot;display&quot;:true,&quot;text&quot;:&quot;Répartition des différents acteurs 1&quot;,&quot;fontSize&quot;:24}}}"></canvas></div>
         </section>
         <section class="portfolio-block photography">
