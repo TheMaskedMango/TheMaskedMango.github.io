@@ -180,6 +180,8 @@ function changeDonut(name){
     $("#Écologie_d").show();
     data=data3
   }
+  donut.config.data.datasets[0].offset = [0,0,0];
+  donut.config.data.datasets[0].offset[0] = 50;
   config = {
     type: "doughnut",
     data,
