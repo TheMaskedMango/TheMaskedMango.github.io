@@ -6,7 +6,22 @@
 *
 */
 
+.theme{
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+}
 
+.theme .py-5{
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.theme p, .theme h1, .theme h2, .theme h3, .theme h4, .theme h5, .theme h6{
+    color: #333;
+}
 
 #headTitle{
     height: 300px;
@@ -20,13 +35,16 @@
     top: 0;
     left: 0;
 }
-.text{
+#text{
     z-index: 1;
 }
 
+#text canvas{
+    margin-top: 50px;
+}
+
 #donut{
-    padding-left: 20%;
-    padding-right: 20%;
+    height: 500px;
 }
 
 .navbar {
@@ -97,5 +115,5 @@
 body {
     min-height: 110vh;
     background-color: #4ca1af;
-    background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+    background-image: linear-gradient(135deg, #4ca1af 0%, #7883b4 100%);
 }

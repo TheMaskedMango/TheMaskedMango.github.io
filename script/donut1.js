@@ -27,7 +27,6 @@ const data = {
 }
 
 const options = {
-  responsive: true,
   cutoutPercentage: 60,
   layout: {
     padding: 32
@@ -86,5 +85,6 @@ ctx.onclick = function(evt){
   clickDonutSlice(evt);
 }
 
-
+donut.config.data.datasets[0].offset[0] = 50;
 $("#texte1 div").hide();
+$("#Etat").show();
