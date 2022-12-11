@@ -1,4 +1,4 @@
-const data = {
+var data = {
   labels: ["Etat", "Ingenieurs","Constructeurs"],
   datasets: [{
     datalabels: {
@@ -26,7 +26,35 @@ const data = {
   }]
 }
 
-const options = {
+var data2 = {
+  labels: ["Etat", "Ingenieurs","Constructeurs"],
+  datasets: [{
+    datalabels: {
+      listeners: {
+        click: function(context, event) {
+          // Receives `click` events only for labels of the first dataset.
+          // The clicked label index is available in `context.dataIndex`.
+          console.log('label ' + context.dataIndex + ' has been clicked!');
+          console.log('mouse is at position x:', event.x, 'and y:', event.y);
+
+          if (event.native.ctrlKey) {
+            console.log('control key is pressed!');
+          }
+        }
+      }
+    },
+    backgroundColor: ["#02166a", "#ffb300", "#01809e"],
+    hoverBorderColor: "#fff",
+    borderColor: ["#02166a", "#ffb300", "#01809e"],
+    data: [50,25,25],
+    hoverBorderWidth: 3,
+    borderWidth: [0,0,0],
+
+    offset: [0,0,0]
+  }]
+}
+
+var options = {
   cutoutPercentage: 60,
   layout: {
     padding: 32

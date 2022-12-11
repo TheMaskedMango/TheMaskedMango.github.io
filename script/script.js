@@ -7,3 +7,10 @@ $(function () {
         }
     });
 });
+
+$("h4").click(function(){
+    $("h4").removeClass("active");
+    $("h4").css('background-color', 'darkslateblue');
+    $(this).addClass("active");
+    $(this).css('background-color', 'indianred');
+});
