@@ -89,7 +89,7 @@ const config = {
 };
 
 const ctx = document.getElementById("pie-chart");
-const donut = new Chart(
+var donut = new Chart(
   ctx,
   config
 );
@@ -116,3 +116,16 @@ ctx.onclick = function(evt){
 donut.config.data.datasets[0].offset[0] = 50;
 $("#texte1 div").hide();
 $("#Etat").show();
+
+$("h4").click(function(){
+  $("h4").removeClass("active");
+  $("h4").css('background-color', 'darkslateblue');
+  $(this).addClass("active");
+  $(this).css('background-color', 'indianred');
+
+  donut.destroy();
+  donut = new Chart(
+    ctx,
+    config
+  );
+});
