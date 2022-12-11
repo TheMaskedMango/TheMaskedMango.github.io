@@ -134,9 +134,11 @@ function clickDonutSlice(click){
   showText(donut.config.data.labels[donutSlice.index]);
 }
 
+var current_donut = "Sécurité"
+
 function showText(name) {
-  $("#texte1 div").hide();
-  $("#"+name).show();
+  $("#texte div").hide();
+  $("#"+current_donut+'_'+name).show();
 }
 
 ctx.onclick = function(evt){
@@ -144,8 +146,8 @@ ctx.onclick = function(evt){
 }
 
 donut.config.data.datasets[0].offset[0] = 50;
-$("#texte1 div").hide();
-$("#Etat").show();
+$("#texte div").hide();
+$("#Sécurité_Etat").show();
 
 $("h4").click(function(){
   $("h4").removeClass("active");
@@ -163,10 +165,19 @@ $("h4").click(function(){
 
 function changeDonut(name){
   if (name==="Sécurité") {
+    current_donut = "Sécurité"
+    $("#texte div").hide();
+    $("#Sécurité_Etat").show();
     data=data1
   }else if(name==="Économie"){
+    current_donut = "Économie"
+    $("#texte div").hide();
+    $("#Économie_a").show();
     data=data2
   }else{
+    current_donut = "Écologie"
+    $("#texte div").hide();
+    $("#Écologie_d").show();
     data=data3
   }
   config = {
