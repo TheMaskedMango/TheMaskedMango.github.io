@@ -12,6 +12,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: white;
+    margin-bottom: 100px;
 }
 
 .theme .py-5{
@@ -74,6 +75,7 @@ h4.active{
 #donut{
     height: 500px;
 }
+
 
 .navbar {
     transition: all 0.4s;
