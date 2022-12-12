@@ -1,5 +1,5 @@
 const data1 = {
-  labels: ["Etat", "Ingenieurs","Constructeurs"],
+  labels: ["Constructeurs","Pietons", "Ingenieurs"],
   datasets: [{
     datalabels: {
       listeners: {
@@ -15,19 +15,19 @@ const data1 = {
         }
       }
     },
-    backgroundColor: ["#02166a", "#ffb300", "#01809e"],
+    backgroundColor: ["#20ff20", "#ff9090", "#ff2020"],
     hoverBorderColor: "#fff",
-    borderColor: ["#02166a", "#ffb300", "#01809e"],
-    data: [50,25,25],
+    borderColor: ["#ffffff", "#ffffff", "#ffffff"],
+    data: [50,20,30],
     hoverBorderWidth: 3,
     borderWidth: [0,0,0],
 
-    offset: [0,0,0]
+    offset: [0,0,0,0]
   }]
 }
 
 const data2 = {
-  labels: ["a", "b","c"],
+  labels: ["Constructeurs","Assureurs","Etat","Usagers","Conducteurs"],
   datasets: [{
     datalabels: {
       listeners: {
@@ -43,19 +43,19 @@ const data2 = {
         }
       }
     },
-    backgroundColor: ["#02166a", "#ffb300", "#01809e"],
+    backgroundColor: ["#20ff20", "#60ff60", "#a0ffa0", "#ff6060", "#ff4040"],
     hoverBorderColor: "#fff",
-    borderColor: ["#02166a", "#ffb300", "#01809e"],
-    data: [15,70,15],
+    borderColor: ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
+    data: [40,10,20,20,10],
     hoverBorderWidth: 3,
-    borderWidth: [0,0,0],
+    borderWidth: [0,0,0,0,0],
 
-    offset: [0,0,0]
+    offset: [0,0,0,0,0]
   }]
 }
 
 const data3 = {
-  labels: ["d", "e","f"],
+  labels: ["Constructeurs", "Etat","Ecologistes"],
   datasets: [{
     datalabels: {
       listeners: {
@@ -71,10 +71,10 @@ const data3 = {
         }
       }
     },
-    backgroundColor: ["#02166a", "#ffb300", "#01809e"],
+    backgroundColor: ["#20ff20", "#80ff80", "#ff2020"],
     hoverBorderColor: "#fff",
     borderColor: ["#02166a", "#ffb300", "#01809e"],
-    data: [33,33,33],
+    data: [50,10,40],
     hoverBorderWidth: 3,
     borderWidth: [0,0,0],
 
@@ -128,7 +128,7 @@ function clickDonutSlice(click){
   const slice = donut.getElementsAtEventForMode(click, 'nearest', { intersect: true}, true);
   const donutSlice = slice[0];
   console.log(donut.config.data.labels[donutSlice.index]);
-  donut.config.data.datasets[donutSlice.datasetIndex].offset = [0,0,0];
+  donut.config.data.datasets[donutSlice.datasetIndex].offset = [0,0,0,0,0];
   donut.config.data.datasets[donutSlice.datasetIndex].offset[donutSlice.index] = 50;
   donut.update();
   showText(donut.config.data.labels[donutSlice.index]);
@@ -167,20 +167,20 @@ function changeDonut(name){
   if (name==="Sécurité") {
     current_donut = "Sécurité"
     $("#texte div").hide();
-    $("#Sécurité_Etat").show();
+    $("#Sécurité_Constructeurs").show();
     data=data1
   }else if(name==="Économie"){
     current_donut = "Économie"
     $("#texte div").hide();
-    $("#Économie_a").show();
+    $("#Économie_Constructeurs").show();
     data=data2
   }else{
     current_donut = "Écologie"
     $("#texte div").hide();
-    $("#Écologie_d").show();
+    $("#Écologie_Constructeurs").show();
     data=data3
   }
-  donut.config.data.datasets[0].offset = [0,0,0];
+  donut.config.data.datasets[0].offset = [0,0,0,0,0];
   donut.config.data.datasets[0].offset[0] = 50;
   config = {
     type: "doughnut",
