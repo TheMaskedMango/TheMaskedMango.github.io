@@ -6,6 +6,10 @@
 *
 */
 
+.titre{
+    margin-bottom:45px ;
+}
+
 .theme{
     display: flex;
     border-top-right-radius: 20px;
@@ -13,6 +17,7 @@
     border-bottom-right-radius: 20px;
     background-color: white;
     margin-bottom: 100px;
+    align-items: center;
 }
 
 .theme .py-5{

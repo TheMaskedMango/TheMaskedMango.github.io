@@ -147,7 +147,7 @@ ctx.onclick = function(evt){
 
 donut.config.data.datasets[0].offset[0] = 50;
 $("#texte div").hide();
-$("#Sécurité_Etat").show();
+$("#Sécurité_Constructeurs").show();
 
 $("h4").click(function(){
   $("h4").removeClass("active");
