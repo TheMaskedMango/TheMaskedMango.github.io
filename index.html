@@ -1,157 +1,37 @@
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="bootstrap.min.css">
-<link rel="stylesheet" href="font-awesome.min.css">
-<script src="script/jquery-3.3.1.slim.min.js"></script>
-<script src="script/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script/chartjs-plugin-datalabels.min.js"></script>
-<script>
-Chart.register("script/chartjs-plugin-datalabels.min.js");
-</script>
-
-<!-- Navbar-->
-<title>La voiture autonome</title>
-<header class="header">
-    <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Analyse de controverse</a>
-            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-            
-            <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">A propos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<div id="headTitle">
-    <div id="particles-js"></div>
-    <div id="text"></div>
-</div>
-
-<div class="container">
-    <div class="pt-5 text-white">
-        <header class="py-5 mt-5">
-            <h1 class="display-4 titre">Mise en contexte</h1>
-            <p class="lead mb-0 premier">Les voitures automatiques, également appelées véhicules autonomes ou voitures autonomes, sont des véhicules qui peuvent se déplacer sans intervention humaine. 
-                Cela signifie qu'elles peuvent utiliser des capteurs, des logiciels et d'autres technologies pour naviguer sur les routes et prendre des décisions en fonction de leur environnement. <br><br>
-                La controverse entourant les voitures automatiques concerne la <strong class="font-weight-bold">sécurité</strong>, <strong class="font-weight-bold">l'écologie</strong> et <strong class="font-weight-bold">l'économie</strong>.<br>
-                Certaines personnes sont sceptiques au sujet la capacité des voitures automatiques à être aussi sûres que des conducteurs humains, notamment en cas d'urgence ou de situations imprévues. D'autres s'inquiètent des conséquences économiques potentielles pour les conducteurs professionnels, qui pourraient perdre leur emploi en raison de l'adoption de la technologie de la voiture autonome. 
-                D'autres s'interrogent au sujet de l'impact écologique que pourrait avoir la transition de voitures classiques aux voitures autonomes. <br>
-            </p>
-            <h1 class="display-4 titre">Niveau d'autonomie</h1>
-            <div id="autonomie">
-                <!-- <p class="lead mb-0">Petit texte.</p>
-                <p class="lead mb-0">Si on veut ajouter un truc avec un
-                    <a href="https://google.com" class="text-white">
-                        <u>lien</u></a>
-                </p> -->
-                <img src="autonomie.png" alt="">
-            </div>
-        </header>
-        <div class="nomargintop">
-            <p class="lead">Il existe <strong class="font-weight-bold">5</strong> niveaux d'autonomie différents. Les véhicules de niveaux plus élevés sont encore en phase de prototypage et d'expérimentation en France et devraient être autorisés à circuler sur les routes d'ici 2025. <br>
-                Le niveau 5 est encore en phase de prototypage et d'expérimentation en France.
-            <p class="lead">Actuellement en France, seuls les véhicules de niveau 2 ou moins sont autorisés à circuler sur toutes les routes.
-                Les véhicules de niveau 3 sont uniquement autorisés à circuler sur les routes de campagne à une vitesse max de 60km/h.
-            </div>
-
-        <h1 class="display-4 titre">Points de controverse</h1>
-        <div class="themeFolder">
-            <h4 class="active">Sécurité</h1>
-            <h4>Économie</h1>
-            <h4>Écologie</h1>
-        </div>
-
-
-        <div class="theme">
-            <div id="donut">
-                <canvas id="pie-chart" width="800" height="450"></canvas>
-            </div>
-
-
-            <div class="py-5" id="texte">
-                <!-- Sécurité -->
-                
-                <div id="Sécurité_Ingenieurs">
-                    <h3>Les ingénieurs</h3>
-                    <p class="lead">L'automatisation informatique permet en cas de faille à un attaquant d'obtenir le contrôle complet du véhicule à distance. De telles failles de sécurité sont trouvées régulièrement dans les systèmes de Tesla, par exemple.</p>
-                    <p class="lead">Pour une réelle baisse des accidents, il faut que les voitures aient une information complète du trafic. Ainsi, il faut que la quasi-intégralité des véhicules en circulation soient autonomes et connectés.
-                        <br>[<a href = "https://www.sciencedirect.com/science/article/pii/S1369847820305386">source</a>]</p>
-                </div>
-
-                <div id="Sécurité_Pietons">
-                    <h3>Les piétons/cyclistes</h3>
-                    <p class="lead">Il est impossible de prévoir tous les cas ; la voiture autonome devra forcément prendre des décisions en cas d'urgence, qui seront sans doute à l'avantage des conducteurs. 
-                        <br>[<a href = "https://explorers.mc2i.fr/la-voiture-autonome-enjeux-et-opportunites">source</a>]</p>
-                </div>
-
-                <div id="Sécurité_Constructeurs">
-                    <h3>Les constructeurs</h3>
-                    <p class="lead">La plupart des accidents sont causés par l'erreur humaine. Les voitures autonomes sont plus réactives, ont une information plus complète, et ne sont pas sujettes à la fatigue ou à l'ébriété.
-                        <br>[<a href = "https://www.renaultgroup.com/news-onair/actualites/les-enjeux-de-la-voiture-autonome/">source</a>]</p>
-                </div>
-
-                <!-- Économie -->
-                <div id="Économie_Constructeurs">
-                    <h3>Les constructeurs</h3>
-                    <p class="lead">Cette nouvelle technologie permettra de nouvelles innovations et de nouveaux emplois. Par exemple, la voiture autonome ouvrirait la voie à des « robotaxis » partagés, sachant qu’un véhicule personnel passe 95 % de son temps… à l’arrêt.”<br>[<a href = "https://www.renaultgroup.com/news-onair/actualites/les-enjeux-de-la-voiture-autonome/">source</a>]</p>
-                </div>
-
-                <div id="Économie_Assureurs">
-                    <h3>Les assureurs</h3>
-                    <p class="lead">La quantité d'information plus importante permet de plus facilement reconstituer les faits. Les démarches pourront également être automatisées.<br>[<a href = "https://www.renaultgroup.com/news-onair/actualites/les-enjeux-de-la-voiture-autonome/">source</a>]</p>
-                </div>
-
-               <div id="Économie_Etat">
-                    <h3>L'État</h3>
-                    <p class="lead">Les véhicules autonomes sont une innovation technologique de pointe qu'il faut financer. </p><p class = "lead">La réduction du nombre d'accidents entraînera une baisse des coûts médicaux, et donc une économie au niveau du secteur de la santé. L’adoption massive de la voiture autonome permettrait d’économiser 190 milliards de dollars en frais médicaux et d’assurance rien qu’aux États-Unis.<br>[<a href = "https://www.renaultgroup.com/news-onair/actualites/les-enjeux-de-la-voiture-autonome/">source</a>]</p>
-                </div>
-
-                <div id="Économie_Usagers">
-                    <h3>Les usagers</h3>
-                    <p class="lead">Le prix très élevé des voitures autonomes les empêche d'être une alternative viable pour l'instant  (85 000 $ l’unité pour le système de cartographie à 360° en temps réel le plus populaire, LIDAR). <br>[<a href ="https://explorers.mc2i.fr/la-voiture-autonome-enjeux-et-opportunites">source</a>].</p>
-                </div>
-
-                <div id="Économie_Conducteurs">
-                    <h3>Les conducteurs</h3>
-                    <p class="lead">L'autonomisation entraînera des licenciements importants dans plusieurs secteurs. <br>[<a href ="https://explorers.mc2i.fr/la-voiture-autonome-enjeux-et-opportunites">source</a>]</p>
-                </div>
-
-                <!-- Écologie -->
-
-                <div id="Écologie_Constructeurs">
-                    <h3>Les constructeurs</h3>
-                    <p class="lead">Le trafic plus fluide réduira la consommation au kilomètre.</p>
-                </div>
-
-                <div id="Écologie_Etat">
-                    <h3>L'État</h3>
-                    <p class="lead">Les véhicules électriques sont plus écologiques que les véhicules thermiques. L'état encourage les particuliers avec des « primes écologiques » à acheter des voitures électriques. Le partage des véhicules personnels pourra permettre de réduire le nombre total de voitures.</p>
-                </div>
-
-                <div id="Écologie_Ecologistes">
-                    <h3>Les mouvements écologistes</h3>
-                    <p class="lead">Effet rebond : les nouvelles possibilités créeront plus de trajets ; jusqu'à 3 fois plus de consommation d'énergie. Nécessité d'une infrastructure importante (réseau, routes adaptées...). Les composants supplémentaires (électronique) ont un impact écologique énorme lors de la production.
-                        <br>[<a href = "https://www.flotauto.com/vehicule-autonome-transition-ecologique-20210315.html">source</a>]</p>
-                </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="pt-5 text-white">
-            <p class="lead mb-0 conclu">
-                Même si la voiture autonome représente une opportunité de développement économique, elle n'est pas une solution viable pour le moment.
-                Elle présente un prix prohibitif et n'a pas encore atteint une fiabilité lui permettant de s'émanciper de sa condition de prototype. <br>
-                De plus, elle n'est pas alternative durable aux voitures classiques, du moins pour les transports individuels.
-            </p>
-        </div>
-    </div>
-</div>
-
-<script src="script/script.js"></script>
-<script src="script/donut1.js"></script><script src="script/particleText.js"></script>
-<script src="script/particles/particles.js"></script><script src="script/particles/app.js"></script>
+<!DOCTYPE html>
+<!--
+Audiovisualization using the html canvas element.
+©2017, Dominik Hofacker
+https://www.behance.net/dominikhofacker
+Please consider supporting this project on behance:
+https://www.behance.net/gallery/49260123/Web-Audio-Visualization
+-->
+    <head>
+        <meta charset="utf-8">
+        <meta content='IE=8' http-equiv='X-UA-Compatible'>
+        <title>Frequcency analysis using HTML5 Audio and Web Audio API</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- Das favicon.ico und das apple-touch-icon.png in das root Verzeichnis -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css' />
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="src/bufferloader.js"></script>
+        <script src="src/id3-minimized.js"></script>
+        <script src="src/audiovisualisierung.js"></script>
+    </head>
+    <body>		   
+       	<input type="file" id="input" onchange="handleFiles(this.files)"/>
+       	<button id="playSampleButton" type="button" onClick="playSample()">Play Sample File</button>
+		<button id="useMicButton" type="button" onClick="useMic()">Use Microphone</button>
+       	<span id="loading"></span>
+        <div id="song_info_wrapper">
+        	<div id="artist">Unknown Artist</div>
+			<div id="title">Unknown Titel</div>
+			<div id="album">Unknown Album</div>
+		</div>
+        <canvas id="freq" width="1024" height="525"></canvas>
+    </body>
+</html>
