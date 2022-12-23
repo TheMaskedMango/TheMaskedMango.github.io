@@ -351,7 +351,7 @@ function drawBars (array) {
 	}
 	console.log($(window).width());
 	//go over each bin
-	for ( var i = 0; i < maxBinCount; i++ ){
+	for ( var i = 0; i < maxBinCount/2; i++ ){
 		
 		var value = array[i];
 		if (value >= threshold) {			
@@ -363,7 +363,7 @@ function drawBars (array) {
 		}
 	}  
         
-	for ( var i = 0; i < maxBinCount; i++ ){
+	for ( var i = 0; i < maxBinCount/2; i++ ){
 
 		var value = array[i];
 		if (value >= threshold) {				
@@ -376,7 +376,7 @@ function drawBars (array) {
 		}
 	} 
         
-	for ( var i = 0; i < maxBinCount; i++ ){
+	for ( var i = 0; i < maxBinCount/2; i++ ){
 
 		var value = array[i];
 		if (value >= threshold) {				
