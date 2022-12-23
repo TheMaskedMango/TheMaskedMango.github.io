@@ -165,7 +165,6 @@ function playSample() {
 	
 	$("button, input").prop("disabled",true);
 }
-playSample()
 
 function useMic() 	
 {
@@ -392,6 +391,8 @@ function drawBars (array) {
     
 	ctx.restore();
 }
+
+playSample()
 
 //function setTextAnimation(array)
 //{
