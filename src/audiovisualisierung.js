@@ -351,17 +351,17 @@ function drawBars (array) {
 	}
 	console.log($(window).width());
 	//go over each bin
-	for ( var i = 0; i < maxBinCount/2; i++ ){
+	// for ( var i = 0; i < maxBinCount/2; i++ ){
 		
-		var value = array[i];
-		if (value >= threshold) {			
-			//draw bin
-			//ctx.fillRect(0 + i * space, c.height - value, 2 , c.height);
-                        //ctx.fillRect(i * space, c.height, 2, -value);
-                        ctx.fillRect(0, radius, $(window).width() <= 450 ? 2 : 3, -value / bar_length_factor);
-                        ctx.rotate((180 / 128) * Math.PI/180);   
-		}
-	}  
+	// 	var value = array[i];
+	// 	if (value >= threshold) {			
+	// 		//draw bin
+	// 		//ctx.fillRect(0 + i * space, c.height - value, 2 , c.height);
+    //                     //ctx.fillRect(i * space, c.height, 2, -value);
+    //                     ctx.fillRect(0, radius, $(window).width() <= 450 ? 2 : 3, -value / bar_length_factor);
+    //                     ctx.rotate((180 / 128) * Math.PI/180);   
+	// 	}
+	// }  
         
 	for ( var i = 0; i < maxBinCount/2; i++ ){
 
