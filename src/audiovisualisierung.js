@@ -208,7 +208,7 @@ function updateProgress (oEvent) {
 	$("button, input").prop("disabled",true);
     var percentComplete = oEvent.loaded / oEvent.total;
 	console.log("Loading music file... " + Math.floor(percentComplete * 100) + "%");
-	$("#loading").html("Loading... " + Math.floor(percentComplete * 100) + "%");
+	//$("#loading").html("Loading... " + Math.floor(percentComplete * 100) + "%");
   } else {
     // Unable to compute progress information since the total size is unknown
 	  console.log("Unable to compute progress info.");
