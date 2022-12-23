@@ -337,7 +337,7 @@ function drawBars (array) {
 	ctx.fillStyle = "#fff";
 
 	var bass = Math.floor(array[1]); //1Hz Frequenz 
-	var radius = 0.45 * $(window).width() <= 450 ? -(bass * 0.25 + 0.45 * $(window).width()) : -(bass * 0.25 + 450);
+	var radius = 0.45 * $(window).width() <= 450 ? -(bass * 0.5 + 0.45 * $(window).width()) : -(bass * 0.25 + 450);
 
 	var bar_length_factor = 1;
 	if ($(window).width() >= 785) {
