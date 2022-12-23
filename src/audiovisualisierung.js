@@ -392,8 +392,6 @@ function drawBars (array) {
 	ctx.restore();
 }
 
-playSample()
-
 //function setTextAnimation(array)
 //{
 //    var bass = Math.floor(array[1]); //4Hz Frequenz 
