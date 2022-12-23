@@ -127,7 +127,7 @@ function handleFiles(files) {
 }
 
 function playSample() {
-	
+	$("#play").hide()
 	fileChosen = true;
     setupAudioNodes();
 	
