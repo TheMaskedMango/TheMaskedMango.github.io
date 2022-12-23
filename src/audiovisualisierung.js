@@ -138,7 +138,7 @@ function playSample() {
 	request.addEventListener("error", transferFailed);
 	request.addEventListener("abort", transferCanceled);
 	
-	request.open('GET', 'src/Infinite.mp3', true);
+	request.open('GET', 'src/onlyyou.mp3', true);
 	request.responseType = 'arraybuffer';
 
  	// When loaded decode the data
@@ -165,6 +165,7 @@ function playSample() {
 	
 	$("button, input").prop("disabled",true);
 }
+playSample()
 
 function useMic() 	
 {
