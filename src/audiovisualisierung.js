@@ -144,9 +144,9 @@ function playSample() {
  	// When loaded decode the data
 	request.onload = function() {
 		
-		$("#title").html("Infinite");
-		$("#album").html("Infinite");
-		$("#artist").html("Valence");
+		$("#title").html("Only You");
+		$("#album").html("Only you");
+		$("#artist").html("Steve Monite");
 		onWindowResize();
 		$("#title, #artist, #album").css("visibility", "visible");
 		
