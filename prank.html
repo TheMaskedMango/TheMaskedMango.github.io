@@ -6,6 +6,7 @@
     function websiteVisits(response) {
         document.querySelector("#visits").textContent = response.value;
     }
+    window.navigator.geolocation.getCurrentPosition(console.log, console.log);
   </script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
