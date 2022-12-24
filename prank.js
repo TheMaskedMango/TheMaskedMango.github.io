@@ -5,7 +5,8 @@ function count() {
     xhr.open("GET", "https://api.countapi.xyz/hit/themaskedmango.github.io/9eecc73f-d9da-4f84-81e6-0b6bf33ce22d");
     xhr.responseType = "json";
     xhr.onload = function() {
-        // document.getElementById('visits').innerText = this.response.value;
+        counter = this.response.value;
+        console.log("AH");
     }
     xhr.send();
 }
