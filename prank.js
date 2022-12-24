@@ -38,9 +38,3 @@ fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=e142098e9dde469cb76c3a8af5d2b1
   document.querySelector("#lat").textContent = json.location.latitude;
   document.querySelector("#long").textContent = json.location.longitude;
 });
-
-fetch("http://ip-api.com/json", requestOptions)
-.then(function(response) { return response.json(); })
-.then(function(json) {
-  document.querySelector("#isp").textContent = json.isp;
-});
