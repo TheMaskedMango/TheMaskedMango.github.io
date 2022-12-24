@@ -2,7 +2,7 @@ var counter
 
 function count() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/themaskedmango.github.io/websiteVisits");
+    xhr.open("GET", "https://api.countapi.xyz/hit/themaskedmango.github.io/9eecc73f-d9da-4f84-81e6-0b6bf33ce22d");
     xhr.responseType = "json";
     xhr.onload = function() {
         // document.getElementById('visits').innerText = this.response.value;
@@ -12,7 +12,7 @@ function count() {
 
 function getCount(){
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/get/themaskedmango.github.io/websiteVisits");
+    xhr.open("GET", "https://api.countapi.xyz/get/themaskedmango.github.io/9eecc73f-d9da-4f84-81e6-0b6bf33ce22d");
     xhr.responseType = "json";
     xhr.onload = function() {
         // document.getElementById('visits').innerText = this.response.value;
