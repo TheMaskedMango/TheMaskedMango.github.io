@@ -25,17 +25,18 @@ function getCount(){
 }
 
 
+function infos(){
+    var requestOptions = {
+        method: 'GET',
+    };
+    var json;
+    fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=e142098e9dde469cb76c3a8af5d2b1d8", requestOptions)
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+      document.querySelector("#city").textContent = json.city.name;
+      document.querySelector("#ip").textContent = json.ip;
+      document.querySelector("#lat").textContent = json.location.latitude;
+      document.querySelector("#long").textContent = json.location.longitude;
+    });
+}
 
-
-var requestOptions = {
-    method: 'GET',
-};
-var json;
-fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=e142098e9dde469cb76c3a8af5d2b1d8", requestOptions)
-.then(function(response) { return response.json(); })
-.then(function(json) {
-  document.querySelector("#city").textContent = json.city.name;
-  document.querySelector("#ip").textContent = json.ip;
-  document.querySelector("#lat").textContent = json.location.latitude;
-  document.querySelector("#long").textContent = json.location.longitude;
-});
