@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viande dans le monde</title>
+    <link href="./../css/tailwind.css" rel="stylesheet" />
+    <script src="./../js/lib/d3.min.js"></script>
+    <script src="./../js/common.js"></script>
+    <script src="./../js/meadow.js"></script>
+    <link rel="stylesheet" href="./../css/pricetags.css">
+    <link rel="stylesheet" href="./../css/meadow.css">
+</head>
+<body>
+    <!-- Header commun -->
+    <header class="bg-gray-800 text-white">
+        <div class="container mx-auto flex justify-between items-center py-4 px-5">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">La viande dans le monde</div>
+        
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-gray-300">Prairie</a>
+            </nav>
+        
+            <!-- Hamburger Icon -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700">
+            <a href="#" class="block py-2 px-4 hover:bg-gray-600">Prairie</a>
+        </div>
+    </header>
+
+    <div class="filter-overlay"></div>
+
+    <!-- Section Prairie -->
+    <div class="text-center">
+        
+        <!-- <div class="ciel h-48">
+            <h1 class="text-5xl font-bold mb-4 edu-au-vic-wa-nt-guides cssanimation lePeek sequence text-white">Prairie</h1>
+        </div>
+        <div class="terre h-72"></div> -->
+
+        <div class="content-container">
+            <div class="content-box">
+                <div class="animals-container">
+                    <img class="animal hen" src="../images/svg/hen.svg" alt="Poule" />
+                    <img class="animal cow" src="../images/svg/cow.svg" alt="Vache" />
+                    <img class="animal saumon" src="../images/svg/salmon.svg" alt="Saumon" />
+                    <img class="animal pig" src="../images/svg/cochongre.svg" alt="Cochon" />
+                    <img class="animal sheep" src="../images/svg/moutongre.svg" alt="Mouton" />
+                </div>
+                <span class="price-tag price-tag--two-lines">
+                    <span class="price-tag__main">$29.99</span>
+                    <span>20% off</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <img src="../images/etiquetteViande.png" alt="étiquette challenge">
+        </div>
+
+        <div class="nutrition-container">
+            <img src="../images/nutrition-facts-label.jpg" alt="étiquette crédits">
+        </div>
+    </div>
+
+    <div class="grass-border">
+        <img src="../images/grass-border.png" alt="Border d'herbe" />
+    </div>
+</body>
+</html>
